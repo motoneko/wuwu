@@ -1,0 +1,98 @@
+{
+  "hero_headline": "美伊停战协议本周五签署，霍尔木兹海峡解封在即，原油期货应声大跌",
+  "daily_overview": "今日国际局势出现重大转折：特朗普宣布美伊停战协议将于本周五正式签署，霍尔木兹海峡即将重开，国际原油期货随即大幅下跌。G7峰会同步在法国开幕，欧美贸易与外交分歧成为核心议题。俄乌战场方面，俄军大规模空袭致哈尔科夫5名救援人员遇难，基辅宗教地标失火，乌克兰则持续以无人机深入打击俄境内目标。科技层面，OpenAI斥资1.5亿美元启动合作伙伴网络加速企业AI落地，Anthropic旗舰模型Fable 5因安全顾虑公测后随即受限，Google DeepMind发布DiffusionGemma实现文本生成速度四倍提升并宣布1000万美元多智能体安全研究基金。AI代理从对话工具向持久自主系统的范式跃迁已成行业共识，能力竞赛与安全治理之间的张力持续升温。",
+  "tech_briefs": [
+    {
+      "title": "Anthropic Claude Fable 5",
+      "url": "https://news.smol.ai/issues/26-06-09-anthropic-claude-fable-5/",
+      "source": "Smol AI News",
+      "summary": "Anthropic正式发布Claude Fable 5与Mythos 5，但Mythos因安全评级过高受限访问，降级回退至Opus 4.8。有用户反映Fable的能力「无法被基准测试所衡量」，短暂开放后收回，引发AI安全与开放边界的行业争议。",
+      "importance": 9
+    },
+    {
+      "title": "[AINews] Fable and Mythos officially too dangerous to release",
+      "url": "https://www.latent.space/p/ainews-fable-and-mythos-officially",
+      "source": "Latent Space",
+      "summary": "Latent Space深度分析Anthropic将Fable与Mythos列为「过于危险而无法发布」背后的决策逻辑，揭示顶尖AI实验室在能力突破与安全治理之间的深层矛盾，或将影响整个行业商业化节奏。",
+      "importance": 8
+    },
+    {
+      "title": "Introducing the OpenAI Partner Network",
+      "url": "https://openai.com/index/introducing-openai-partner-network",
+      "source": "OpenAI News",
+      "summary": "OpenAI宣布投入1.5亿美元启动全球合作伙伴网络，重点协助企业伙伴加速AI采纳与业务转型。此举标志着OpenAI从模型提供商向生态系统运营者明确转型，商业化布局大幅提速。",
+      "importance": 8
+    },
+    {
+      "title": "DiffusionGemma: 4x faster text generation",
+      "url": "https://deepmind.google/blog/diffusiongemma-4x-faster-text-generation/",
+      "source": "DeepMind Blog",
+      "summary": "Google DeepMind发布DiffusionGemma，采用扩散模型架构将文本生成速度提升四倍，为大语言模型推理效率带来新突破，有望显著压低推理成本并拓展实时应用场景。",
+      "importance": 7
+    },
+    {
+      "title": "华为出code cli了，无限用GLM5.1",
+      "url": "https://linux.do/t/topic/2405921",
+      "source": "LinuxDo",
+      "summary": "华为DevEco Code基于OpenCode扩展开发，当前免费提供GLM5.1无限量调用，为国内开发者提供本土AI编码辅助替代方案，在开发者社区引发广泛关注与讨论。",
+      "importance": 6
+    }
+  ],
+  "finance_briefs": [
+    {
+      "title": "Crude oil futures drop after Trump promises an Iran deal will be signed Friday",
+      "url": "https://www.npr.org/2026/06/15/nx-s1-5858113/crude-oil-futures-drop-after-trump-promises-an-iran-deal-will-be-signed-friday",
+      "source": "NPR World",
+      "summary": "特朗普宣布美伊协议将于本周五签署并重开霍尔木兹海峡，国际原油期货随即大幅下跌。该海峡承载全球约20%的石油运输，其解封预示能源市场供应紧张局势将明显缓解，通胀压力有望减轻。",
+      "importance": 9
+    },
+    {
+      "title": "The U.S. and Iran announce a deal to end the war",
+      "url": "https://www.npr.org/2026/06/14/nx-s1-5858099/us-iran-trump-deal-end-war-hormuz",
+      "source": "NPR World",
+      "summary": "美伊正式宣布达成停战协议，美方将解除对霍尔木兹海峡的封锁。协议落地后，中东地缘风险溢价有望大幅压缩，全球大宗商品市场、航运保险及新兴市场资产将受到显著提振。",
+      "importance": 10
+    },
+    {
+      "title": "G7 gets underway amid tensions between Europe and the U.S.",
+      "url": "https://www.npr.org/2026/06/15/nx-s1-5856340/g7-gets-underway-amid-tensions-between-europe-and-the-u-s",
+      "source": "NPR World",
+      "summary": "G7峰会在法国开幕，欧美在贸易关税、乌克兰援助及AI监管等核心议题上立场分歧明显。七国集团协调能力下降，或令全球经济治理框架承压，市场对多边贸易秩序前景保持观望。",
+      "importance": 7
+    }
+  ],
+  "politics_briefs": [
+    {
+      "title": "The U.S. and Iran announce a deal to end the war",
+      "url": "https://www.npr.org/2026/06/14/nx-s1-5858099/us-iran-trump-deal-end-war-hormuz",
+      "source": "NPR World",
+      "summary": "特朗普在80岁生日当天宣布美伊停战协议达成，美方将移除对霍尔木兹海峡的封锁，协议定于本周五正式签署。这是特朗普第二任期内最重大的外交成果之一，将深刻重塑中东地缘格局。",
+      "importance": 10
+    },
+    {
+      "title": "Russian attack sets fire to religious site in Kyiv, kills 5 in Kharkiv",
+      "url": "https://www.npr.org/2026/06/15/g-s1-128118/russia-ukraine-war",
+      "source": "NPR World",
+      "summary": "俄军对乌克兰发动大规模空袭，哈尔科夫5名救援人员遇难，基辅20人受伤，乌克兰最重要宗教地标之一遭炮击起火。战事在美伊外交突破的同一天继续升级，欧洲安全局势依然严峻。",
+      "importance": 9
+    },
+    {
+      "title": "G7 gets underway amid tensions between Europe and the U.S.",
+      "url": "https://www.npr.org/2026/06/15/nx-s1-5856340/g7-gets-underway-amid-tensions-between-europe-and-the-u-s",
+      "source": "NPR World",
+      "summary": "G7峰会在法国开幕，欧美关系紧张是本届峰会主旋律。在乌克兰战局、贸易政策及AI监管等议题上，跨大西洋盟友立场出现明显裂痕，多边合作机制正接受压力测试。",
+      "importance": 7
+    }
+  ],
+  "editor_note": "今日最大变量是美伊协议——若本周五顺利落地，将同步利好能源市场与地缘稳定；而Fable/Mythos的安全争议则提示：AI能力的加速释放，正在逼近某条隐形红线。",
+  "keywords": [
+    "美伊停战协议",
+    "霍尔木兹海峡",
+    "Claude Fable 5",
+    "G7峰会",
+    "多智能体安全",
+    "原油期货",
+    "俄乌战争",
+    "OpenAI合作伙伴网络"
+  ]
+}
