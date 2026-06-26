@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>磁吸无线充 2026 场景与方案全景报告</title>
+<style>
+  :root {
+    --bg: #fafafa;
+    --card: #ffffff;
+    --ink: #1a1a1a;
+    --ink-soft: #555;
+    --border: #e5e5e5;
+    --accent: #0066cc;
+    --accent-soft: #e8f0fa;
+    --apple: #1d1d1f;
+    --warn: #d97706;
+    --warn-bg: #fef3c7;
+    --good: #047857;
+    --good-bg: #d1fae5;
+    --bad: #b91c1c;
+    --bad-bg: #fee2e2;
+    --neutral: #6b7280;
+    --shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+                 "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 40px 32px 80px;
+  }
+
+  header.hero {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: #fff;
+    padding: 56px 32px;
+    margin: -40px -32px 40px;
+    border-radius: 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  header.hero::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(99,179,237,0.15) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  header.hero h1 {
+    margin: 0 0 12px;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    position: relative;
+  }
+
+  header.hero .subtitle {
+    color: #a8c5e8;
+    font-size: 15px;
+    margin: 0;
+    position: relative;
+  }
+
+  header.hero .meta {
+    margin-top: 24px;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    font-size: 13px;
+    color: #c9d6e8;
+    position: relative;
+  }
+
+  header.hero .meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .toc {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-bottom: 40px;
+    box-shadow: var(--shadow);
+  }
+
+  .toc h3 {
+    margin: 0 0 12px;
+    font-size: 13px;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+  }
+
+  .toc ol {
+    margin: 0;
+    padding-left: 24px;
+    columns: 2;
+    column-gap: 32px;
+  }
+
+  .toc ol li {
+    margin: 4px 0;
+    break-inside: avoid;
+  }
+
+  .toc a {
+    color: var(--ink);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+
+  .toc a:hover { color: var(--accent); }
+
+  section {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 32px 36px;
+    margin-bottom: 28px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+  }
+
+  section h2 {
+    margin: 0 0 24px;
+    padding-bottom: 14px;
+    border-bottom: 2px solid var(--accent);
+    font-size: 22px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--ink);
+  }
+
+  section h2 .num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  section h3 {
+    margin: 28px 0 14px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--apple);
+  }
+
+  section h3:first-child { margin-top: 0; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 14px;
+    background: #fff;
+  }
+
+  thead th {
+    background: #f5f7fa;
+    color: var(--ink);
+    font-weight: 600;
+    text-align: left;
+    padding: 12px 14px;
+    border-bottom: 2px solid var(--border);
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  tbody td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #f0f0f0;
+    vertical-align: top;
+  }
+
+  tbody tr:hover { background: #fafbfc; }
+
+  tbody tr:last-child td { border-bottom: none; }
+
+  .badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.5;
+    white-space: nowrap;
+  }
+
+  .badge-good { background: var(--good-bg); color: var(--good); }
+  .badge-warn { background: var(--warn-bg); color: var(--warn); }
+  .badge-bad  { background: var(--bad-bg); color: var(--bad); }
+  .badge-accent { background: var(--accent-soft); color: var(--accent); }
+  .badge-neutral { background: #f3f4f6; color: var(--neutral); }
+
+  .check { color: var(--good); font-weight: 700; }
+  .cross { color: var(--bad); font-weight: 700; }
+
+  .callout {
+    background: var(--accent-soft);
+    border-left: 4px solid var(--accent);
+    padding: 14px 18px;
+    border-radius: 4px;
+    margin: 16px 0;
+    color: var(--ink);
+    font-size: 14px;
+  }
+
+  .callout.warn {
+    background: var(--warn-bg);
+    border-left-color: var(--warn);
+  }
+
+  .callout strong {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  ul.insight-list {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0;
+  }
+
+  ul.insight-list li {
+    background: #f8f9fb;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    border-left: 3px solid var(--accent);
+    font-size: 14px;
+  }
+
+  ul.insight-list li strong {
+    color: var(--accent);
+    margin-right: 6px;
+  }
+
+  .quote {
+    font-style: italic;
+    color: #555;
+    font-size: 13px;
+    background: #f9f9f9;
+    padding: 4px 8px;
+    border-radius: 3px;
+    display: inline-block;
+  }
+
+  .star {
+    color: #f59e0b;
+    font-size: 14px;
+    letter-spacing: -1px;
+  }
+
+  .star-empty { color: #e5e7eb; }
+
+  .scenario-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 14px;
+    margin: 16px 0;
+  }
+
+  .scenario-card {
+    background: #f8f9fb;
+    border-radius: 8px;
+    padding: 16px 18px;
+    border: 1px solid var(--border);
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+
+  .scenario-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+  }
+
+  .scenario-card .icon {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .scenario-card h4 {
+    margin: 0 0 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .scenario-card p {
+    margin: 0;
+    font-size: 12px;
+    color: var(--ink-soft);
+    line-height: 1.55;
+  }
+
+  .group-tag {
+    display: inline-block;
+    padding: 4px 10px;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    letter-spacing: 0.02em;
+  }
+
+  .group-tag.warn { background: var(--warn); }
+  .group-tag.bad { background: var(--bad); }
+  .group-tag.good { background: var(--good); }
+  .group-tag.neutral { background: var(--neutral); }
+
+  .trends {
+    counter-reset: trend;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .trends li {
+    position: relative;
+    padding: 14px 16px 14px 56px;
+    margin-bottom: 10px;
+    background: #f8f9fb;
+    border-radius: 8px;
+    counter-increment: trend;
+    font-size: 14px;
+    border: 1px solid var(--border);
+  }
+
+  .trends li::before {
+    content: counter(trend);
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 13px;
+  }
+
+  .footer {
+    text-align: center;
+    color: var(--ink-soft);
+    font-size: 12px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+    margin-top: 40px;
+  }
+
+  .footer a { color: var(--accent); text-decoration: none; }
+
+  @media (max-width: 720px) {
+    .container { padding: 20px 16px 60px; }
+    header.hero { padding: 36px 20px; margin: -20px -16px 28px; }
+    header.hero h1 { font-size: 24px; }
+    section { padding: 22px 18px; }
+    .toc ol { columns: 1; }
+    table { font-size: 12px; }
+    thead th, tbody td { padding: 8px 10px; }
+  }
+
+  @media print {
+    body { background: #fff; font-size: 11pt; }
+    header.hero { background: #1a1a2e !important; -webkit-print-color-adjust: exact; }
+    section { box-shadow: none; border: 1px solid #ddd; page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<header class="hero">
+  <h1>磁吸无线充 2026 场景与方案全景报告</h1>
+  <p class="subtitle">手机厂商方案 · 车载现状 · 消费者 VOC · 痛点排序 · 趋势机会</p>
+  <div class="meta">
+    <span>📅 数据截至 2026-06</span>
+    <span>🔎 来源：WPC / 厂商官网 / Amazon / Reddit / 小红书 / 微博 / 评测媒体</span>
+    <span>📊 4 路并行研究汇总</span>
+  </div>
+</header>
+
+<nav class="toc">
+  <h3>目录</h3>
+  <ol>
+    <li><a href="#sec1">手机厂商方案速览</a></li>
+    <li><a href="#sec2">车载磁吸现状</a></li>
+    <li><a href="#sec3">消费者使用场景</a></li>
+    <li><a href="#sec4">痛点排序</a></li>
+    <li><a href="#sec5">人群与态度差异</a></li>
+    <li><a href="#sec6">趋势与机会</a></li>
+    <li><a href="#sources">关键参考来源</a></li>
+  </ol>
+</nav>
+
+<section id="sec1">
+  <h2><span class="num">1</span>手机厂商方案速览</h2>
+
+  <h3><span class="group-tag good">整机原生磁吸阵营</span></h3>
+  <p style="font-size:13px;color:var(--ink-soft);margin:0 0 12px;">手机本体内置磁环，无需配壳即用 MagSafe/Qi2 配件。</p>
+  <table>
+    <thead>
+      <tr><th>厂商</th><th>机型</th><th>功率</th><th>备注</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Apple</strong></td>
+        <td>iPhone 12 – 17 全系</td>
+        <td><span class="badge badge-accent">15W / 25W Qi2.2</span></td>
+        <td>15/16/17 Pro 系列升级 25W，生态最完整</td>
+      </tr>
+      <tr>
+        <td><strong>Google</strong></td>
+        <td>Pixel 10 / 10 Pro / 10 Pro XL / 10 Pro Fold（2025-08）</td>
+        <td><span class="badge badge-accent">15–25W</span></td>
+        <td>品牌名 <strong>Pixelsnap</strong>，<span class="check">安卓首个全系</span>原生磁吸</td>
+      </tr>
+      <tr>
+        <td><strong>Samsung</strong></td>
+        <td>Z Fold7 / Z Flip7（2026）</td>
+        <td><span class="badge badge-accent">25W Qi2.2</span></td>
+        <td><span class="check">安卓首款</span>整机磁吸折叠屏；但 S25/S26 直板仍无磁吸</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 style="margin-top:32px;"><span class="group-tag warn">磁吸壳路线</span></h3>
+  <p style="font-size:13px;color:var(--ink-soft);margin:0 0 12px;">机身无磁，靠官方或第三方壳实现，互通性差异很大。</p>
+  <table>
+    <thead>
+      <tr><th>厂商</th><th>路径</th><th>上限功率</th><th>互通性</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Samsung S25 / S26</strong></td>
+        <td>官方 "Qi2 Ready" 磁吸壳</td>
+        <td><span class="badge badge-neutral">15W</span></td>
+        <td>兼容 MagSafe 配件</td>
+      </tr>
+      <tr>
+        <td><strong>小米 15 / 15 Ultra</strong></td>
+        <td>第三方 + 官方磁吸壳</td>
+        <td><span class="badge badge-warn">80W 私有</span> / Qi 15W</td>
+        <td><span class="cross">跨品牌互通差</span></td>
+      </tr>
+      <tr>
+        <td><strong>Huawei Pura/Mate 70</strong></td>
+        <td>华为官方磁吸壳</td>
+        <td><span class="badge badge-warn">80W SuperCharge</span></td>
+        <td>鸿蒙封闭</td>
+      </tr>
+      <tr>
+        <td><strong>OPPO Find X8 / OnePlus 13</strong></td>
+        <td>AirVOOC 50W 磁吸 + 自家壳</td>
+        <td><span class="badge badge-warn">50W 风冷</span></td>
+        <td>自家闭环</td>
+      </tr>
+      <tr>
+        <td><strong>vivo X200 Pro</strong></td>
+        <td>第三方</td>
+        <td><span class="badge badge-neutral">30W（私有 50W）</span></td>
+        <td>线圈位置偏下</td>
+      </tr>
+      <tr>
+        <td><strong>Honor Magic V5 折叠屏</strong></td>
+        <td>第三方</td>
+        <td><span class="badge badge-neutral">50W</span></td>
+        <td>无原生磁吸</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <strong>关键格局</strong>
+    <ul style="margin:6px 0 0;padding-left:18px;">
+      <li><strong>Qi2.2 25W = 新高端门槛</strong>，苹果 → Pixel → 三星折叠屏破冰</li>
+      <li>中国厂商走「高功率私有磁吸壳」封闭路径（小米/华为 80W、OPPO 50W），跨品牌零互通</li>
+      <li>第三方壳厂（<strong>PITAKA、OtterBox、MagBak</strong>）= 跨阵营粘合剂，把安卓机接入 MagSafe 生态</li>
+      <li>WPC 截至 2026/4：<strong>1247 款 Qi2 认证壳、1841+ 款 Qi2 配件</strong></li>
+    </ul>
+  </div>
+</section>
+
+<section id="sec2">
+  <h2><span class="num">2</span>车载磁吸现状</h2>
+
+  <h3><span class="group-tag good">原厂（OEM）真做了的只有少数</span></h3>
+  <table>
+    <thead>
+      <tr><th>车型</th><th>方案</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Nissan 2026 Pathfinder / Murano</strong></td>
+        <td>西方主流车厂首个原厂 <strong>Qi2 15W 凸起磁环 + 风扇散热</strong></td>
+      </tr>
+      <tr>
+        <td><strong>小米 SU7 / YU7</strong></td>
+        <td>不是单一磁吸板，而是<strong>「磁吸点位生态」</strong>——YU7 有 16 个磁吸点，全车 4 个无线充位 + 27W 螺纹供电口；国产车里最完整</td>
+      </tr>
+      <tr>
+        <td>Tesla / BBA / 蔚小理华问界</td>
+        <td><span class="cross">普通 Qi 平板（5–15W、无磁吸）</span></td>
+      </tr>
+      <tr>
+        <td>Porsche「Wireless Charging」</td>
+        <td><span class="badge badge-neutral">11kW 给车充电</span>，不是给手机</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3><span class="group-tag neutral">Aftermarket 主流形态</span></h3>
+  <table>
+    <thead>
+      <tr><th>形态</th><th>状态</th><th>关键吐槽 / 优势</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>出风口夹</strong></td>
+        <td><span class="badge badge-accent">销量最大</span></td>
+        <td>夏天暖风把塑料夹烤软掉落是高频投诉</td>
+      </tr>
+      <tr>
+        <td><strong>仪表台 3M 粘贴</strong>（MagBak 代表）</td>
+        <td><span class="badge badge-good">2026 best overall</span></td>
+        <td>最稳；少数评测吐槽几周后胶失效</td>
+      </tr>
+      <tr>
+        <td><strong>专车专用屏幕背挂</strong></td>
+        <td><span class="badge badge-accent">中国品类爆发</span></td>
+        <td>BMW 14.9"、Tesla、Model Y 专用</td>
+      </tr>
+      <tr>
+        <td>CD 口</td>
+        <td><span class="badge badge-bad">淘汰</span></td>
+        <td>新车基本取消 CD 口</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout warn">
+    <strong>功率梯队</strong>
+    15W Qi2 主流；2025Q4 起 25W Qi2.2 密集上新（LISEN/UGREEN/Anker），实际只有 iPhone 17 系列能跑满。
+    <strong style="margin-top:8px;">差异化重点 = 带 TEC 半导体制冷 / 风扇主动散热</strong>
+  </div>
+
+  <div class="callout">
+    <strong>需求趋势</strong>
+    车载需求未被 CarPlay/AndroidAuto 压制，反而抬升——车机让给导航投屏，手机本身仍要充+取拿，磁吸支架更刚需。
+  </div>
+</section>
+
+<section id="sec3">
+  <h2><span class="num">3</span>消费者使用场景（VOC 整合）</h2>
+
+  <p style="margin:0 0 16px;color:var(--ink-soft);">按 Amazon 评论 + 小红书 / Reddit / 微博 提及密度排序。</p>
+
+  <table>
+    <thead>
+      <tr><th style="width:50px;">#</th><th>场景</th><th>主流品类</th><th>关键洞察</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>1</strong></td><td><strong>车载导航 + 边充电</strong></td><td>出风口 / 仪表台磁吸车充</td><td>「MagSafe 最好的生态其实在你的车上」</td></tr>
+      <tr><td><strong>2</strong></td><td><strong>床头 StandBy 桌钟</strong></td><td>立式座、双线圈底座</td><td>iPhone 14 Pro+ 横放当床头钟，无 LED 灯款受夸</td></tr>
+      <tr><td><strong>3</strong></td><td><strong>办公桌副屏</strong></td><td>立式磁吸 + AirPods 槽</td><td>视频会议时手机当副屏</td></tr>
+      <tr><td><strong>4</strong></td><td><strong>通勤口袋救急</strong></td><td>5000mAh 卡片厚充电宝</td><td>牛仔裤兜可塞、登机 3C 认证</td></tr>
+      <tr><td><strong>5</strong></td><td><strong>差旅一插三充</strong></td><td>折叠三合一</td><td>手机 + Watch + AirPods 共一插座</td></tr>
+      <tr><td><strong>6</strong></td><td><strong>长途 / 户外</strong></td><td>10000mAh + PD 输出</td><td>评测口径甜点位</td></tr>
+      <tr><td><strong>7</strong></td><td><strong>厨房看菜谱</strong></td><td>磁吸冰箱贴 / 挂件</td><td>单手做饭单手不动手机</td></tr>
+      <tr><td><strong>8</strong></td><td><strong>健身房 + 跑步机</strong></td><td>带支架充电宝</td><td>横屏立式刷剧</td></tr>
+    </tbody>
+  </table>
+
+  <h3>新兴玩法（增长曲线陡）</h3>
+  <div class="scenario-grid">
+    <div class="scenario-card">
+      <div class="icon">🎮</div>
+      <h4>磁吸散热背夹 + 手游</h4>
+      <p>魅族 PANDAER 妙磁、红魔 VC Cooler 5 Pro；抖音/B站爆款，「《原神》120 帧不掉」</p>
+    </div>
+    <div class="scenario-card">
+      <div class="icon">📸</div>
+      <h4>MagSafe 三脚架 + Vlog</h4>
+      <p>ShiftCam SnapPod、Elago 系列；「一甩即贴，不用拧夹子」</p>
+    </div>
+    <div class="scenario-card">
+      <div class="icon">💻</div>
+      <h4>桌面副屏 / 显示器侧挂</h4>
+      <p>Belkin、ESR 磁吸夹；跑 Continuity Camera 或 Slack</p>
+    </div>
+    <div class="scenario-card">
+      <div class="icon">🔌</div>
+      <h4>磁吸 Hub 一对多</h4>
+      <p>Ugreen Uno；一颗充手机+耳机+手表，Pixelsnap 用户高频提到</p>
+    </div>
+  </div>
+</section>
+
+<section id="sec4">
+  <h2><span class="num">4</span>痛点排序（亚马逊 + 社媒交叉验证）</h2>
+
+  <table>
+    <thead>
+      <tr><th>痛点</th><th style="width:120px;">频次</th><th>典型用户原话</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>发热触发温控停充</strong></td>
+        <td><span class="star">★★★★★</span></td>
+        <td><span class="quote">"Woke up to 3% with multiple alerts that charging was paused due to temperature, the phone was scorching"</span><br><small>消费者报道实测 2/5 款超 40℃</small></td>
+      </tr>
+      <tr>
+        <td><strong>磁力弱 / 滑落</strong></td>
+        <td><span class="star">★★★★★</span></td>
+        <td><span class="quote">"Weak magnets are the #1 complaint across every magnetic power bank"</span><br><span class="quote">"My phone fell during left turns at 55 mph"</span></td>
+      </tr>
+      <tr>
+        <td><strong>厚壳 / PopSocket 冲突</strong></td>
+        <td><span class="star">★★★★<span class="star-empty">★</span></span></td>
+        <td>&gt;2.5–3mm 壳基本失效</td>
+      </tr>
+      <tr>
+        <td><strong>无线损耗虚标</strong></td>
+        <td><span class="star">★★★★<span class="star-empty">★</span></span></td>
+        <td><span class="quote">"10K 充电宝实际只够 1.5 次"</span>（损耗 ~30%）</td>
+      </tr>
+      <tr>
+        <td><strong>"Qi2 Ready" 不等于真磁吸</strong></td>
+        <td><span class="star">★★★★<span class="star-empty">★</span></span></td>
+        <td><span class="quote">"Samsung pretends Galaxy phones have Qi2"</span><br>50% 三星用户将"无内建磁铁"视为换机劝退点</td>
+      </tr>
+      <tr>
+        <td><strong>老机型（iPhone 11/SE3）无原生磁吸</strong></td>
+        <td><span class="star">★★★<span class="star-empty">★★</span></span></td>
+        <td>贴磁吸圈对位不准，无快充</td>
+      </tr>
+      <tr>
+        <td><strong>出风口夹高温变形</strong></td>
+        <td><span class="star">★★★<span class="star-empty">★★</span></span></td>
+        <td><span class="quote">"塑料变软掉车里"</span>，使用 2–3 个月即坏</td>
+      </tr>
+      <tr>
+        <td><strong>过夜涓流不停止</strong></td>
+        <td><span class="star">★★★<span class="star-empty">★★</span></span></td>
+        <td>老 Qi（非 Qi2）款不会自动从 80% 跳出</td>
+      </tr>
+      <tr>
+        <td><strong>三星 S Pen 与磁铁互斥</strong></td>
+        <td><span class="star">★★<span class="star-empty">★★★</span></span></td>
+        <td>装第三方 Qi2 壳弹"磁铁干扰 S Pen"警告</td>
+      </tr>
+      <tr>
+        <td><strong>MagSafe 钱包剪切力滑落</strong></td>
+        <td><span class="star">★★<span class="star-empty">★★★</span></span></td>
+        <td>牛仔裤兜进出时脱落，Ridge 钱包尤其多</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="sec5">
+  <h2><span class="num">5</span>人群与态度差异</h2>
+
+  <ul class="insight-list">
+    <li><strong>iPhone 用户：</strong>关注 MagSafe 生态完整度 + MFM 认证；老用户（11/SE）反复抱怨锁配件。</li>
+    <li><strong>三星用户：</strong>分裂明显——&gt;50% 把"无内建 Qi2 磁铁"视为换机劝退点，35% 不在乎；S Pen 用户反对内建磁铁。</li>
+    <li><strong>Pixel 10 用户：</strong>首批"原生 Qi2 安卓机"，社区情绪偏正面，Pixelsnap 配件已成日常。</li>
+    <li><strong>国产手机用户：</strong>「国产高功率无线（小米 / 华为 / vivo / OPPO）都还可以，MagSafe 不行」，但承认磁吸生态丰富。</li>
+    <li><strong>配件党：</strong>愿为 PITAKA、MagBak 这类 N52 强磁生态壳付溢价。</li>
+  </ul>
+</section>
+
+<section id="sec6">
+  <h2><span class="num">6</span>趋势与机会</h2>
+
+  <ol class="trends">
+    <li><strong>Qi2.2 25W 充电宝/车充正在替代 15W</strong>（CES 2026 后 ESR/Belkin/Baseus/Ugreen 集体升级），但 15W 老款因兼容老 iPhone/Pixel/三星仍走量 ——「15W + 25W 共存窗口期还有 1–2 年」。</li>
+    <li><strong>车载 = 最强场景</strong>，原厂跟不上，aftermarket 仍是大蛋糕；下一代差异点 = <strong>主动散热（TEC/风扇）+ 25W</strong>。</li>
+    <li><strong>「磁吸生态壳」品牌（PITAKA / MagBak）正在成为安卓阵营的标准选择</strong>，替代厂商应做的官方磁吸。</li>
+    <li><strong>折叠屏原生磁吸（Z Fold/Flip7）= 2026 关键节点</strong>，预计带动一波「折叠机专用磁吸配件」细分需求。</li>
+    <li><strong>散热背夹 + 磁吸 + 手游</strong> 是确定性增长的新兴细分（小米 / 红魔 / 魅族领跑）。</li>
+    <li><strong>国产高功率私有方案的封闭性 = 第三方配件商的机会</strong>—— 做「小米 / 华为 / OPPO 专属磁吸生态」比硬挤 MagSafe 红海更易突围。</li>
+    <li><strong>核心未解痛点 = 发热</strong>，下一代差异化大概率围绕 <strong>主动散热 + 智能温控 + Qi2.2 高效率芯片组</strong>。</li>
+  </ol>
+</section>
+
+<section id="sources">
+  <h2><span class="num">7</span>关键参考来源</h2>
+
+  <h3>厂商方案</h3>
+  <ul style="font-size:13px;line-height:1.9;">
+    <li><a href="https://blog.google/products-and-platforms/devices/pixel/pixelsnap-accessories-charger-ring-stand/" target="_blank">Google · Pixelsnap 官方发布</a></li>
+    <li><a href="https://www.androidcentral.com/accessories/power-charging/wpc-announces-qi2-25w-major-android-devices-certification-new-standard" target="_blank">WPC · Qi2 25W 厂商认证（Android Central）</a></li>
+    <li><a href="https://zens.tech/pages/phones-with-wireless-charging-technology" target="_blank">Zens · Qi2/Qi2.2 厂商认证一览</a></li>
+    <li><a href="https://9to5google.com/2025/01/07/oneplus-13-qi2-magnetic-cases-charger/" target="_blank">OnePlus 13 · 假 Qi2 + 磁吸壳/AirVOOC 50W</a></li>
+    <li><a href="https://www.huaweicentral.com/huawei-mate-80-introduces-magnetic-charging-tech-for-first-time/" target="_blank">Huawei Mate 80 · 引入磁吸技术</a></li>
+    <li><a href="https://www.ipitaka.com/collections/magez-system" target="_blank">PITAKA MagEZ 体系</a></li>
+  </ul>
+
+  <h3>车载</h3>
+  <ul style="font-size:13px;line-height:1.9;">
+    <li><a href="https://www.motor1.com/news/782261/nissan-qi2-wireless-phone-charger/" target="_blank">Nissan 2026 · 首个原厂 Qi2 磁吸</a></li>
+    <li><a href="https://www.xiaomiev.com/yu7" target="_blank">小米 YU7 · 磁吸点位生态</a></li>
+    <li><a href="https://9to5mac.com/2025/10/20/lisen-qi2-2-magsafe-car-charger-delivers-25w-charging-for-supported-iphones/" target="_blank">LISEN · Qi2.2 25W + TEC 散热车充</a></li>
+    <li><a href="https://magbak.com/blogs/magbak-blog/best-magnetic-car-phone-mounts-2026-tested-for-hold-strength" target="_blank">MagBak · 2026 Best Magnetic Car Mounts</a></li>
+  </ul>
+
+  <h3>VOC（亚马逊 + 评测）</h3>
+  <ul style="font-size:13px;line-height:1.9;">
+    <li><a href="https://www.macworld.com/article/668978/feature-best-magsafe-magnetic-portable-battery-packs-power-banks-for-iphone.html" target="_blank">Macworld · Best MagSafe Power Banks 2026</a></li>
+    <li><a href="https://www.cultofmac.com/reviews/ugreen-magflow-power-bank-review" target="_blank">Cult of Mac · Ugreen MagFlow Qi2.2 评测</a></li>
+    <li><a href="https://www.macrumors.com/2026/01/07/ces-2026-esr-qi2-2-wireless-chargers/" target="_blank">MacRumors · CES 2026 ESR Qi2.2 25W</a></li>
+    <li><a href="https://www.howtogeek.com/anker-maggo-wireless-charging-station-foldable-3-in-1-review/" target="_blank">HowToGeek · Anker MagGo 3-in-1 评测</a></li>
+  </ul>
+
+  <h3>VOC（社媒）</h3>
+  <ul style="font-size:13px;line-height:1.9;">
+    <li><a href="https://www.androidcentral.com/phones/samsung-galaxy/poll-results-samsung-galaxy-s26-lack-of-built-in-qi2-magnets" target="_blank">AndroidCentral 投票 · &gt;50% 三星用户磁吸缺失即劝退</a></li>
+    <li><a href="https://www.droid-life.com/2025/07/15/yes-samsung-we-want-the-qi2-magnets-built-into-the-phone/" target="_blank">Droid-Life · 求三星内建磁铁</a></li>
+    <li><a href="https://www.sammyfans.com/2026/02/26/galaxy-s26-ultra-warns-about-qi2-magnetic-cases-interfering-with-s-pen/" target="_blank">Sammy Fans · S26 Ultra S Pen 磁铁冲突</a></li>
+    <li><a href="https://news.qq.com/rain/a/20250514A033ZQ00" target="_blank">消费者报道 · 磁吸充电宝高温实测</a></li>
+    <li><a href="https://post.smzdm.com/p/ad2rm34n/" target="_blank">少数派 · 车上的 MagSafe 生态</a></li>
+  </ul>
+</section>
+
+<div class="footer">
+  报告生成时间 · 2026-06-26 · 4 路并行研究汇总（手机厂商 / 车载 / 亚马逊 / 社媒）<br>
+  数据准确性以厂商官网与原始评测为准
+</div>
+
+</div>
+
+</body>
+</html>
