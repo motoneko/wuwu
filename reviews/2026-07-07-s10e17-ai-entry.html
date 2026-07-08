@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>精读|AI 时代的超级入口还是手机吗?——科技早知道 S10E17</title>
+<style>
+  :root{
+    --bg:#f5f6f8; --card:#ffffff; --ink:#1e293b; --muted:#64748b;
+    --accent:#0f4c81; --line:#e2e8f0;
+    --act-now:#16a34a; --act-verify:#d97706; --act-watch:#64748b;
+    --ev-data:#2563eb; --ev-exp:#7c3aed; --ev-infer:#dc2626;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+    line-height:1.75;font-size:16px}
+  .wrap{max-width:900px;margin:0 auto;padding:32px 20px 64px}
+  .card{background:var(--card);border-radius:12px;padding:28px 32px;margin-bottom:24px;
+    box-shadow:0 1px 3px rgba(15,23,42,.06)}
+  h1{font-size:26px;line-height:1.4;margin:8px 0 4px}
+  h2{font-size:20px;margin:0 0 16px;padding-left:12px;border-left:4px solid var(--accent)}
+  h3{font-size:16px;margin:20px 0 8px;color:var(--accent)}
+  .kicker{display:inline-block;background:var(--accent);color:#fff;font-size:13px;
+    padding:2px 10px;border-radius:999px;letter-spacing:1px}
+  .meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px 24px;
+    margin-top:16px;font-size:14px}
+  .meta div span:first-child{color:var(--muted);margin-right:8px}
+  .note{font-size:13px;color:var(--muted);border-top:1px dashed var(--line);margin-top:16px;padding-top:12px}
+  .badge{display:inline-block;font-size:12px;padding:1px 9px;border-radius:999px;color:#fff;
+    margin-right:6px;white-space:nowrap;vertical-align:1px}
+  .b-now{background:var(--act-now)} .b-verify{background:var(--act-verify)} .b-watch{background:var(--act-watch)}
+  .b-data{background:var(--ev-data)} .b-exp{background:var(--ev-exp)} .b-infer{background:var(--ev-infer)}
+  .legend{font-size:13px;color:var(--muted)}
+  .legend .badge{margin-bottom:4px}
+  .core{background:linear-gradient(135deg,#0f4c81,#155e93);color:#fff}
+  .core h2{color:#fff;border-left-color:#7fb3d8}
+  .core ol{margin:0;padding-left:22px}
+  .core li{margin-bottom:10px}
+  .core li:last-child{margin-bottom:0}
+  ul{padding-left:22px;margin:8px 0}
+  li{margin-bottom:6px}
+  .insight{border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:8px;
+    padding:14px 18px;margin:14px 0;background:#fafbfc}
+  .insight .tags{margin-bottom:6px}
+  details{margin-top:10px;font-size:14px;color:var(--muted)}
+  details summary{cursor:pointer;color:#b45309;font-weight:600;font-size:13px}
+  table{width:100%;border-collapse:collapse;font-size:14px;margin-top:8px}
+  th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+  th{background:#f1f5f9;white-space:nowrap}
+  blockquote{margin:14px 0;padding:12px 18px;background:#fffbeb;border-left:4px solid #f59e0b;
+    border-radius:0 8px 8px 0;font-size:15px}
+  blockquote .who{display:block;margin-top:6px;font-size:13px;color:var(--muted)}
+  .toc{font-size:14px;columns:2;column-gap:32px}
+  .toc a{color:var(--accent);text-decoration:none}
+  .toc a:hover{text-decoration:underline}
+  footer{text-align:center;font-size:13px;color:var(--muted);margin-top:32px}
+  @media (max-width:640px){
+    .card{padding:20px 18px} .toc{columns:1} h1{font-size:22px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 元信息卡 -->
+  <div class="card">
+    <span class="kicker">播客精读</span>
+    <h1>AI 时代的超级入口还是手机吗?</h1>
+    <div class="meta">
+      <div><span>来源</span>科技早知道(声动活泼)S10E17</div>
+      <div><span>类型</span>播客对谈 · 约 43 分钟</div>
+      <div><span>日期</span>2026-07-07(录制于 MWC 上海期间)</div>
+      <div><span>相关度</span><strong>高</strong> —— 整机 PM 直接相关</div>
+      <div><span>嘉宾</span>韩伯啸(vivo X 系列产品部总经理)</div>
+      <div><span></span>陈一强(联发科技无线通信事业部副总经理)</div>
+    </div>
+    <div class="note">转写勘误:原文的「天津9500 / 超能买」应为<b>天玑 9500</b>芯片;「蓝星大模型」应为 vivo <b>蓝心大模型</b>;「orange OS」应为 <b>OriginOS</b>;「x phone 6 / X46 / S46」均指 vivo 新一代折叠旗舰,具体型号以官方为准;「发哥」为联发科昵称。</div>
+  </div>
+
+  <!-- 核心判断 -->
+  <div class="card core">
+    <h2>核心判断(读这三句就够)</h2>
+    <ol>
+      <li>手机在 AI 时代不是被取代,而是升级为<b>中枢</b>:端侧的核心价值 = 实时感知 + 物理/虚拟世界数据融合,单功能 AI 硬件(录音卡之类)大概率被手机吸收。</li>
+      <li>芯片联合定义的本质是「场景 → 规格」的翻译能力;2-3 年的芯片周期逼着 PM 在没有场景证据时对平台能力下注——<b>「零和一」比「投多投少」致命得多</b>。</li>
+      <li>折叠屏已走完补短板阶段,胜负手转向<b>大屏价值兑现(打开率)</b>;折叠 + 端侧 AI 是双方共同押注的组合。</li>
+    </ol>
+  </div>
+
+  <!-- 图例 + 目录 -->
+  <div class="card">
+    <div class="legend">
+      <b>标签图例</b> —— 证据强度:
+      <span class="badge b-data">数据支撑</span><span class="badge b-exp">一手经验</span><span class="badge b-infer">个人推断</span>
+      行动分层:
+      <span class="badge b-now">立即借鉴</span><span class="badge b-verify">需验证</span><span class="badge b-watch">长期观察</span>
+    </div>
+    <h3 style="margin-top:16px">话题脉络</h3>
+    <div class="toc">
+      <div>1. <a href="#t1">Teaching Customer 与「场景牵引技术」</a></div>
+      <div>2. <a href="#t2">折叠屏:从补短板到兑现大屏价值</a></div>
+      <div>3. <a href="#t3">芯片 2-3 年 vs 模型 3-6 个月的下注逻辑</a></div>
+      <div>4. <a href="#t4">自研芯片的两道真实门槛</a></div>
+      <div>5. <a href="#t5">端侧 AI 的工程拆解</a></div>
+      <div>6. <a href="#t6">端云边界与手机的中枢地位</a></div>
+      <div>7. <a href="#t7">下一战场:从入口到 Agent 生态</a></div>
+    </div>
+  </div>
+
+  <!-- 话题 1 -->
+  <div class="card" id="t1">
+    <h2>1|Teaching Customer 与「场景牵引技术」</h2>
+    <h3>要点浓缩</h3>
+    <ul>
+      <li>vivo 与联发科从约三年前(一千多天)开始联合定义天玑 9500,当下已在共同定义两三代之后的产品;每代旗舰由 vivo 首发。</li>
+      <li>联发科视 vivo 为 <b>teaching customer</b>:芯片厂隔着应用层、OS 看不见用户,需要整机厂告诉它「该投什么」。经典案例:设计 GPU 时以为「看视频」是播放画面,实际用户满屏弹幕才叫看视频——渲染需求被真实场景改写。</li>
+      <li>vivo 方法论:「用场景牵引技术」——场景 = 用户在什么环境、解决什么问题、方案要达到什么标准;例:为「拍不清快速运动」在 NPU 里定义了专门追焦的 tiny NPU 模块。</li>
+    </ul>
+    <h3>PM 洞察</h3>
+    <div class="insight">
+      <div class="tags"><span class="badge b-exp">一手经验</span><span class="badge b-now">立即借鉴</span></div>
+      「场景 → 标准 → 规格」的翻译能力,是整机厂在芯片联合定义中真正的议价筹码——芯片厂有算力路线图,但只有整机 PM 拥有场景解释权。可直接借鉴:把需求文档收敛为「环境-问题-达标标准」三段式,让每条硬件诉求都可被论证、可被验收。
+    </div>
+    <div class="insight">
+      <div class="tags"><span class="badge b-exp">一手经验</span><span class="badge b-now">立即借鉴</span></div>
+      弹幕案例的通用教训:<b>真实使用方式常推翻设计假设</b>。规格评审时增加一问:「这个场景我们是看用户数据得来的,还是想象出来的?」
+      <details><summary>反方视角</summary>与单一芯片伙伴深度绑定(共同定义三代产品)换来了定制能力,代价是供应商议价空间与多平台灵活性下降。若高通/自研路线在某代实现跳变,切换成本极高——这一点播客里双方都不会说。</details>
+    </div>
+  </div>
+
+  <!-- 话题 2 -->
+  <div class="card" id="t2">
+    <h2>2|折叠屏:从补短板到兑现大屏价值</h2>
+    <h3>要点浓缩</h3>
+    <ul>
+      <li>韩伯啸把折叠屏发展分为两阶段:第一阶段解决先天短板(折痕、耐用、续航、发热),他认为「大概在过去两年内解决得相对比较好」;第二阶段才是发挥大屏优势。</li>
+      <li>体验打分:前年直板 90 vs 折叠 80,今年他认为已到同一水平——但折叠更贵,「多花的钱要值得」成为新命题。</li>
+      <li>公认痛点是<b>打开率不足</b>:用户觉得展开后「没什么不一样」。他的解法是提升「屏效比」,让大屏承载多任务与生产力。</li>
+      <li>定位判断:折叠屏是手机与平板/PC 之间的桥梁——既有大信息量,又便携,「一台设备解决两件事」。</li>
+    </ul>
+    <h3>PM 洞察</h3>
+    <div class="insight">
+      <div class="tags"><span class="badge b-exp">一手经验</span><span class="badge b-verify">需验证</span></div>
+      竞争焦点迁移信号:折叠屏的规格竞赛(更薄、无折痕)在头部厂商叙事中已让位于<b>大屏价值兑现</b>。若属实,产品定义资源应从形态参数转向大屏专属体验(多任务、分屏生产力、AI 大屏交互)。<b>验证方式</b>:拉行业/自家折叠机型的大屏打开率、展开时长占比与应用分布数据,确认「补短板阶段已结束」是否成立。
+    </div>
+    <div class="insight">
+      <div class="tags"><span class="badge b-infer">个人推断</span><span class="badge b-watch">长期观察</span></div>
+      「折叠 = 手机与平板/PC 的桥梁」意味着它蚕食的不是直板旗舰,而是「手机+平板」双机需求——目标用户画像与营销叙事应据此校准。
+      <details><summary>反方视角</summary>「短板已解决」出自最大利益相关方之口。若价格降不下来,打开率上不去,第二阶段可能长期不到来;盖泡面的吐槽消失之前,渗透率天花板依然存在。</details>
+    </div>
+  </div>
+
+  <!-- 话题 3 -->
+  <div class="card" id="t3">
+    <h2>3|芯片 2-3 年 vs 模型 3-6 个月:错配下的下注逻辑</h2>
+    <h3>要点浓缩</h3>
+    <ul>
+      <li>先进制程芯片需提前 2-3 年规划,AI 模型 3-6 个月一迭代,错配是常态且无法根除——「实体的东西速度没办法比软件快」。</li>
+      <li>联发科 2022 年在芯片里塞进大算力 NPU 时,「没有任何 AI 体验」,纯粹是赌;逻辑是:没有 AI 能力是「零和一的问题」(丧失资格),有了之后是「一点几的问题」(程度差距,可用软件追)。</li>
+      <li>错判的形态大多不是方向错,而是<b>投多投少</b>;且不对称——投多是浪费成本,投少要再等一代(2-3 年),所以「更怕投少」。</li>
+      <li>降风险路径:vivo 先用自研外挂小芯片试验(人像虚化/美化),经市场验证后再并入下一代 SoC。</li>
+      <li>面对新芯片,硬件已定,靠软件模型优化「把硬件能力榨干」。</li>
+    </ul>
+    <h3>PM 洞察</h3>
+    <div class="insight">
+      <div class="tags"><span class="badge b-exp">一手经验</span><span class="badge b-now">立即借鉴</span></div>
+      把规格决策显式分为两类:<b>资格型规格</b>(没有就出局,如 NPU 算力、影像底层能力)与<b>程度型规格</b>(差一点可用软件/下代追回)。资格型允许在证据不足时超配,程度型才适用严格 ROI 论证。这是一个可直接引入立项评审的分类框架。
+    </div>
+    <div class="insight">
+      <div class="tags"><span class="badge b-exp">一手经验</span><span class="badge b-verify">需验证</span></div>
+      「怕投少不怕投多」的不对称风险观:投少的真实成本是<b>一整代产品周期的机会窗口</b>,不是账面 BOM。<b>验证方式</b>:选一个自家曾「投少」的规格(如内存/NPU),复盘错失窗口的实际代价 vs 当时省下的成本,校准本组织的下注系数。
+    </div>
+    <div class="insight">
+      <div class="tags"><span class="badge b-exp">一手经验</span><span class="badge b-now">立即借鉴</span></div>
+      「外挂小芯片试验 → 市场验证 → 并入 SoC」是硬件功能的 MVP 路径,把平台级风险拆成可回退的单点试验。同理可推广:新传感器、新马达先上单一机型试水,验证后进平台。
+      <details><summary>反方视角</summary>「宁多勿少」的叙事有幸存者偏差——赌错的芯片不会被拿上播客讲。且该逻辑只在旗舰毛利下成立;中端机型超配算力可能直接死于成本,套用时要看毛利结构。</details>
+    </div>
+  </div>
+
+  <!-- 话题 4 -->
+  <div class="card" id="t4">
+    <h2>4|自研芯片的两道真实门槛</h2>
+    <h3>要点浓缩</h3>
+    <ul>
+      <li>门槛一:<b>量体</b>。必须从高端起步(毛利够)、出货量够大,才能支撑先进制程的试错成本,并让台积电等代工厂相信你会持续拉走产能——否则形不成正循环。</li>
+      <li>门槛二:<b>端到端系统分析能力</b>。芯片厂知道怎么堆 CPU/GPU/NPU,但隔着 OS 和应用层不知道用户怎么用;整机厂知道场景,却难以把场景翻译成带宽、能效甜蜜点等芯片规格。两边能力都要有,才能自己走通整条链路。</li>
+    </ul>
+    <h3>PM 洞察</h3>
+    <div class="insight">
+      <div class="tags"><span class="badge b-exp">一手经验</span><span class="badge b-watch">长期观察</span></div>
+      评估「自研 vs 联合定义」时,技术团队强弱是最不重要的变量;<b>出货量体(产能话语权+试错资本)与场景→规格翻译能力</b>才是硬门槛。这个框架同样适用于评估竞品自研芯片的可持续性:看它的高端量体是否撑得起下一次制程迭代。
+      <details><summary>反方视角</summary>此论出自联发科副总,立场天然是「劝退自研」。苹果、华为已证明路能走通,谷歌 Tensor 靠外部代工+中等量体也维持了多代——门槛是真的,但「不能走」是夸大的。</details>
+    </div>
+  </div>
+
+  <!-- 话题 5 -->
+  <div class="card" id="t5">
+    <h2>5|端侧 AI 的工程拆解:芯片三件事 + 整机四层</h2>
+    <h3>要点浓缩</h3>
+    <ul>
+      <li><b>芯片侧三件事</b>:① 算力投资;② 软件开发架构(NeuroPilot 类套件,让三方模型知道怎么在 NPU 上跑到最快);③ 能效与系统调度——并把调度权开放给整机厂,因为只有 OS 厂商知道用户此刻注视哪个窗口、哪个 AI 任务要求实时性。</li>
+      <li><b>双 NPU 架构</b>:超能效 NPU 常驻跑小模型(如会议语音转文字),超性能 NPU 按需处理大任务(分角色、摘要)——按场景的「持续性 × 实时性」分配硬件。</li>
+      <li><b>vivo 整机四层</b>:① 模型层——蓝心大模型压缩适配天玑 NPU;② 系统层——OriginOS 折叠版保证跑模型时前台不卡顿;③ 端侧训练——美颜偏好在端上自学习(少见的端侧训练落地);④ 应用层——会议助手(分角色 ASR)、文件管理 AI(自动聚合「装修相关」文件并可分析各家报价)。</li>
+      <li>联合定义中的「争执」是论证机制:长焦影像要不要重投,靠 vivo 用消费者价值论证;AI 算力要不要预埋,靠联发科用技术路线反向 push vivo 找场景。</li>
+    </ul>
+    <h3>PM 洞察</h3>
+    <div class="insight">
+      <div class="tags"><span class="badge b-exp">一手经验</span><span class="badge b-now">立即借鉴</span></div>
+      端侧 AI 的差异化不在「模型跑分」,在<b>系统工程</b>:任务按「持续性 × 实时性」两维分级,映射到不同能效档位的硬件。整机 PM 可立即做的事:把自家 AI 功能清单按这两维打表,检查调度策略是否与之匹配——这是体验差异的真正来源。
+    </div>
+    <div class="insight">
+      <div class="tags"><span class="badge b-exp">一手经验</span><span class="badge b-watch">长期观察</span></div>
+      端侧训练(美颜自学习)是「数据不出端的个性化」的雏形——隐私叙事 + 越用越懂你的留存钩子。当前场景单一,但方向值得跟踪:哪些偏好类数据适合端侧持续学习,可能成为下一轮差异化清单。
+    </div>
+    <div class="insight">
+      <div class="tags"><span class="badge b-exp">一手经验</span><span class="badge b-now">立即借鉴</span></div>
+      「争执出真规格」:与供应商的分歧不是摩擦成本,而是逼出投资论证的机制——方向一致的评审产生不了信息。可借鉴:重大规格评审刻意设置反方角色,要求用「用户观感差异」而非工程参数为投资辩护(长焦案例的原话逻辑)。
+    </div>
+  </div>
+
+  <!-- 话题 6 -->
+  <div class="card" id="t6">
+    <h2>6|端云边界与手机的中枢地位</h2>
+    <h3>要点浓缩</h3>
+    <ul>
+      <li>端侧模型天花板约 <b>4B</b>:再大,成本、发热、电池都不适应,且与云端比能力没有意义——「端跑不好就锁死在模型大小的天花板」。</li>
+      <li>端侧核心价值 = <b>实时感知</b>:手机同时拥有物理世界信息(位置、基站、传感器)与虚拟世界信息(微信、应用行为),融合后才能精准触达——这是云永远拿不到的上下文。</li>
+      <li>分工:识别、记忆在端(且最关键数据在端、可加密后送云);超长文本理解、生成式图像/视频等重推理上云;图片处理恰好卡在中间,逐步下放。</li>
+      <li>新形态单功能 AI 硬件(录音卡等)用的是为其他产品定义的旧芯片,能力错配,且「手机芯片很容易把这个功能直接做进去」——易被吸收。</li>
+      <li>韩伯啸:手机仍是中枢性入口——所有便携设备里信息量最大、可操控性最强、算力最强;眼镜耳机是场景补充。苹果被传在耳机上加摄像头,本质也是抢感知数据。</li>
+    </ul>
+    <h3>PM 洞察</h3>
+    <div class="insight">
+      <div class="tags"><span class="badge b-exp">一手经验</span><span class="badge b-infer">个人推断</span><span class="badge b-now">立即借鉴</span></div>
+      AI 功能规划可直接套用这张分层表:<b>感知/识别/记忆 → 端;重推理/生成 → 云;图片处理 → 逐代下放</b>。规划新 AI 功能时先问「它吃的是模型能力还是用户上下文」——吃上下文的做在端上才有护城河,吃模型能力的不要和云硬碰。
+    </div>
+    <div class="insight">
+      <div class="tags"><span class="badge b-infer">个人推断</span><span class="badge b-now">立即借鉴</span></div>
+      竞品新形态 AI 硬件出现时的快速评估框架:它的核心能力能否被「手机 + 软件更新」覆盖?能——则是功能不是品类,跟进软件即可;不能(独占感知位置,如常戴眼镜的第一视角)——才构成真正的入口威胁。
+      <details><summary>反方视角</summary>「手机仍是中枢」是手机产业链的集体自我叙事。中枢 ≠ 唯一感知入口:若眼镜/耳机拿走「第一视角 + 全天候」的感知数据,手机可能沦为算力盒子——中枢地位保住了,入口价值却被分走。苹果耳机加摄像头恰恰是这个方向的信号,值得当作威胁而非佐证来读。</details>
+    </div>
+  </div>
+
+  <!-- 话题 7 -->
+  <div class="card" id="t7">
+    <h2>7|下一战场:从入口到 Agent 生态</h2>
+    <h3>要点浓缩</h3>
+    <ul>
+      <li>陈一强:端侧设备让 AI 触达更多人之后,下一步是<b>生态竞争</b>——设备理解用户后「推荐什么」,后端是互联网生态打法向 agent 的整体转型(agent to agent 规格已被各互联网公司拥抱)。</li>
+      <li>智能体体验的最后一环是「手和脚」:端侧理解你,后端生态帮你完成任务——互联网生态将被再次颠覆;互联网厂商在做终端,终端厂商在建生态,未来一两年剧变。</li>
+      <li>韩伯啸类比 4G/5G 落地期:外卖大战、打车大战——最终占据 C 端入口者通吃。</li>
+    </ul>
+    <h3>PM 洞察</h3>
+    <div class="insight">
+      <div class="tags"><span class="badge b-infer">个人推断</span><span class="badge b-watch">长期观察</span></div>
+      入口的价值链正在从「装机分发」上移到「推荐权」:谁最理解用户,谁决定 agent 把任务派给哪家服务。整机厂第一次坐在「最理解用户」的位置上(端侧上下文独占),但缺服务生态承接——<b>观察指标</b>:头部厂商与互联网平台的 agent 合作协议形态(谁做入口、谁做履约、分成怎么切),以及 agent-to-agent 标准由谁主导。
+      <details><summary>反方视角</summary>「终端厂拿到入口红利」的前提是用户愿意把任务委托给系统级 agent 而非超级 App;若微信/支付宝级应用自建 agent 闭环,终端厂可能重演「管道化」——运营商的旧剧本。</details>
+    </div>
+  </div>
+
+  <!-- 六维度速查 -->
+  <div class="card">
+    <h2>六维度速查表</h2>
+    <table>
+      <tr><th>维度</th><th>本篇核心洞察</th><th>行动</th></tr>
+      <tr><td><b>产品定义</b></td><td>「场景-问题-标准」三段式定义法;AI 任务按「持续性×实时性」分级映射硬件;大屏价值(打开率)成为折叠屏定义核心</td><td><span class="badge b-now">立即借鉴</span></td></tr>
+      <tr><td><b>产品策略</b></td><td>规格分「资格型/程度型」两类下注;外挂小芯片→验证→并入 SoC 的低风险路径;折叠+AI 组合押注</td><td><span class="badge b-now">立即借鉴</span></td></tr>
+      <tr><td><b>用户价值</b></td><td>「多花的钱要值得」是折叠屏第二阶段的价值命题;真实使用方式(弹幕)常推翻设计假设;端侧个性化=隐私+越用越懂</td><td><span class="badge b-verify">需验证</span></td></tr>
+      <tr><td><b>竞争分析</b></td><td>单功能 AI 硬件易被手机吸收——用「手机+软件能否覆盖」评估新品类威胁;苹果耳机摄像头=感知入口争夺信号</td><td><span class="badge b-now">立即借鉴</span></td></tr>
+      <tr><td><b>行业趋势</b></td><td>端侧模型 4B 天花板;端=感知/记忆,云=重推理;AI 模糊品类边界;agent 生态是下一战场</td><td><span class="badge b-watch">长期观察</span></td></tr>
+      <tr><td><b>项目决策</b></td><td>「怕投少不怕投多」的不对称风险观;争执出真规格(评审设反方);与芯片伙伴提前 3 年绑定场景定义</td><td><span class="badge b-verify">需验证</span></td></tr>
+    </table>
+  </div>
+
+  <!-- 启示与借鉴 -->
+  <div class="card">
+    <h2>启示与可借鉴方向</h2>
+    <ul>
+      <li><b>需求文档升级</b>:把硬件相关需求统一收敛为「环境-问题-达标标准」三段式,让每条规格诉求可论证、可验收——这是与芯片/供应商谈判的语言。</li>
+      <li><b>立项评审引入两个框架</b>:①「资格型 vs 程度型」规格分类;②「投少的机会成本 = 一代产品周期」的不对称风险核算。</li>
+      <li><b>AI 功能规划对照端云分层表</b>:吃用户上下文的功能做在端上(有护城河),吃模型能力的对接云(别硬碰),图片类关注逐代下放的时机。</li>
+      <li><b>建立折叠屏大屏打开率的数据跟踪</b>(如业务涉及折叠形态),验证「第二阶段」叙事真伪后再定义大屏专属体验的投入力度。</li>
+      <li><b>竞品新硬件快评模板</b>:先问「手机+软件更新能否覆盖」,再问「它是否独占了某个感知位置」。</li>
+    </ul>
+    <div class="note">提示:当前按行业通用视角输出。填写产品上下文(价位段/市场/当期议题)后,本节可落到你负责的具体业务与在研项目。</div>
+  </div>
+
+  <!-- 金句 -->
+  <div class="card">
+    <h2>金句回放</h2>
+    <blockquote>"我们的说法就是用场景去牵引技术。场景就是用户在具体什么样的环境里面,需要解决一个什么样的问题,然后这个解决方案要达到一个什么样的标准。"<span class="who">—— 韩伯啸,05:30</span></blockquote>
+    <blockquote>"如果完全没有(AI 能力),我们觉得那叫做零跟一的问题。但如果都有一,那是一点几,是程度的问题,可以通过软件各种方式努力。"<span class="who">—— 陈一强,24:16</span></blockquote>
+    <blockquote>"我们更多的其实是怕投少了。投少了你可能就要等到下一次迭代,或者可能有更长的时间。"<span class="who">—— 陈一强,17:43</span></blockquote>
+    <blockquote>"端侧的核心价值还是实时感知……它有你物理世界上的资讯,也有你虚拟世界上的资讯。怎么把这些融合变成一个好的服务跟 AI 赋能给你,这是端侧的核心价值。"<span class="who">—— 陈一强,37:21</span></blockquote>
+  </div>
+
+  <footer>精读生成于 2026-07-08 · 所属周期 2026-W28 · 手机整机 PM 复盘体系 MVP v1</footer>
+</div>
+</body>
+</html>
